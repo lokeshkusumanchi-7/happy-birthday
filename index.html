@@ -179,7 +179,7 @@
       </div>
 
       <div class="event">
-        <button onclick="reveal('meet')">💑 First Meet🥳 </button>
+        <button onclick="reveal('meet')">💑 First Meet </button>
         <p>The moment my heart spoke out loud.</p>
         <div id="meet" class="story" style="color: #ff85a2;">
           Favorite day 
@@ -190,27 +190,16 @@
 
       <div class="event">
         <button onclick="reveal('memory')">🌅 Favorite Memory</button>
-        <p>That day at the beach, laughing endlessly.</p>
+        <p>Memories For Ever</p>
         <div id="memory" class="story">
           <img src="WhatsApp Image 2025-05-05 at 10.25.36_3e8da5e2.jpg" style="min-width:270px;max-width: 600px;height:auto;" class="photo">  
         </div>
-      </div>
+        
+           </div>
     </div>
+  </div> 
 
-    <!-- Background Music -->
-    <audio autoplay loop>
-      <source src="background.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <!-- Optional Redirect Notice -->
-    <p id="redirect-note" style="display: none;">Redirecting to your surprise... 🎁</p>
-
-  </div> <!-- End of main-content -->
-
-  <!-- Scripts -->
-  <script>
-    // Intro animation transition
+ <script>
     window.onload = function() {
       setTimeout(() => {
         document.getElementById('intro-screen').style.display = 'none';
@@ -239,7 +228,7 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("timer").innerHTML =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        `${days}d ${hours}h ${minutes}m ${seconds}s 🥳 `;
     }
 
     updateTimer();
