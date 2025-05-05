@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      background-color: #ff85a2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff6f91;
+    }
+    .story {
+      display: none;
+      margin: 10px auto 30px;
+      max-width: 600px;
+      font-size: 1.1em;
+      background: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    #continue {
+      display: none;
+      background-color: #6a89cc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tap to Relive Our Moments 💞</h1>
+
+  <button onclick="reveal('msg')">📩 First Message</button>
+  <div id="msg" class="story">
+    I still remember the first message you sent — sweet, unexpected, and filled with warmth. That moment began a story I never want to end.
+  </div>
+
+  <button onclick="reveal('meet')">💑 First Meet🥳 </button>
+  <div id="meet" class="story">
+    The first time I saw you in person, it felt like time paused. Your smile, your presence — everything felt just right.
+  </div>
+
+  <button onclick="reveal('memory')">🌅 Favorite Memory</button>
+  <div id="memory" class="story">
+    That sunset evening, hand in hand, laughing without care — it’s forever etched in my heart as one of our best days.
+  </div>
+
+  <button id="continue" onclick="location.href='main.html'">💝 Continue to Your Surprise</button>
+
+  <script>
+    let revealed = {
+      msg: false,
+      meet: false,
+      memory: false
+    };
+
+    function reveal(id) {
+      document.getElementById(id).style.display = 'block';
+      revealed[id] = true;
+      checkAllRevealed();
+    }
+
+    function checkAllRevealed() {
+      if (revealed.msg && revealed.meet && revealed.memory) {
+        document.getElementById("continue").style.display = 'inline-block';
+      }
+    }
+  </script>
+</body>
+</html>
